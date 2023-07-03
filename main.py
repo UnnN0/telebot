@@ -50,14 +50,14 @@ def callback(call):
         keyboard.add(button1, button2)
         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text= 'Выберите технику, о наличии которой желаете сообщить.', reply_markup=keyboard)
     elif call.data == "katok":
-        with open('image\katok.jpg', 'rb') as photo:
+        with open('katok.jpg', 'rb') as photo:
             bot.send_photo(announcement_channel, photo=photo, caption= text570) 
         keyboard = telebot.types.InlineKeyboardMarkup()
         main = telebot.types.InlineKeyboardButton(text='Главное меню', callback_data='back')
         keyboard.add(main)
         bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text= 'Сообщение отправлено в канал', reply_markup=keyboard)  
     elif call.data == "case570":
-        with open('image\Case 570ST.jpg', 'rb') as photo:
+        with open('Case 570ST.jpg', 'rb') as photo:
             
             bot.send_photo(announcement_channel, photo=photo, caption= text570)
         keyboard = telebot.types.InlineKeyboardMarkup()
